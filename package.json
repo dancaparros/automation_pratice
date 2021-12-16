@@ -1,0 +1,37 @@
+{
+  "name": "automation_pratice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:chrome": "cypress run --browser chrome",
+    "combine:report": "mochawesome-merge ./mochawesome-report/*.json -o index.json",
+    "generate:report": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dancaparros/automation_pratice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dancaparros/automation_pratice/issues"
+  },
+  "homepage": "https://github.com/dancaparros/automation_pratice/blob/main/README.md",
+  "dependencies": {
+    "cypress": "^4.10.0"
+  },
+  "devDependencies": {
+    "@knapsack-pro/cypress": "^4.2.1",
+    "cypress-cucumber-preprocessor": "^2.5.3",
+    "cypress-multi-reporters": "^1.4.0",
+    "mocha": "^8.0.1",
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.1.0",
+    "mochawesome-report-generator": "^5.1.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}
